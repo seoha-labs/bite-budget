@@ -37,12 +37,20 @@ export function useMeals(uid: string | null, range?: Range): {
     }
     constraints.push(orderBy('eatenAt', 'desc'));
     const q = query(collection(db, 'users', uid, 'meals'), ...constraints);
-    const unsub = onSnapshot(q, (snap) => {
-      setMeals(
-        snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<Meal, 'id'>) })),
-      );
-      setLoading(false);
-    });
+    const unsub = onSnapshot(
+      q,
+      (snap) => {
+        setMeals(
+          snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<Meal, 'id'>) })),
+        );
+        setLoading(false);
+      },
+      (err) => {
+        console.error('useMeals snapshot error:', err);
+        setMeals([]);
+        setLoading(false);
+      },
+    );
     return unsub;
   }, [uid, startMs, endMs]);
 

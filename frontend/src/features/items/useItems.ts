@@ -24,12 +24,20 @@ export function useItems(uid: string | null): { items: Item[]; loading: boolean 
       collection(db, 'users', uid, 'items'),
       orderBy('purchaseDate', 'desc'),
     );
-    const unsub = onSnapshot(q, (snap: QuerySnapshot) => {
-      setItems(
-        snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<Item, 'id'>) })),
-      );
-      setLoading(false);
-    });
+    const unsub = onSnapshot(
+      q,
+      (snap: QuerySnapshot) => {
+        setItems(
+          snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<Item, 'id'>) })),
+        );
+        setLoading(false);
+      },
+      (err) => {
+        console.error('useItems snapshot error:', err);
+        setItems([]);
+        setLoading(false);
+      },
+    );
     return unsub;
   }, [uid]);
 
