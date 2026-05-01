@@ -10,3 +10,4 @@ lib/
 .vite/
 coverage/
 .pnpm-store/
+*.tsbuildinfo
