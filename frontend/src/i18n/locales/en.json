@@ -1,0 +1,96 @@
+{
+  "app": {
+    "name": "bite-budget",
+    "tagline": "Worth of every bite"
+  },
+  "nav": {
+    "items": "Pantry",
+    "meals": "Meals",
+    "reports": "Reports",
+    "account": "Account"
+  },
+  "auth": {
+    "signInWithGoogle": "Continue with Google",
+    "signOut": "Sign out",
+    "loading": "Loading…"
+  },
+  "items": {
+    "title": "Pantry",
+    "addNew": "Add item",
+    "edit": "Edit item",
+    "name": "Name",
+    "purchaseDate": "Purchase date",
+    "unit": "Unit",
+    "totalQuantity": "Total quantity",
+    "totalPrice": "Total price",
+    "note": "Note",
+    "save": "Save",
+    "delete": "Delete",
+    "archive": "Archive",
+    "unarchive": "Unarchive",
+    "filter": {
+      "inStock": "In stock",
+      "archived": "Archived"
+    },
+    "remaining": "{{remaining}}/{{total}} {{unit}}",
+    "unitPriceHint": "Unit price {{price}} / {{unit}}",
+    "empty": "No items yet. Add your first one.",
+    "consumedWarning": "Already consumed in meals. Archived instead of deleted.",
+    "recalcPast": "Recalculate past meals"
+  },
+  "meals": {
+    "title": "Meals",
+    "addNew": "Add meal",
+    "edit": "Edit meal",
+    "eatenAt": "When",
+    "label": "Kind",
+    "labels": {
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner",
+      "snack": "Snack",
+      "other": "Other"
+    },
+    "consumptions": "Eaten",
+    "addConsumption": "Add ingredient",
+    "selectItem": "Select item",
+    "qty": "Qty",
+    "share": "Cost",
+    "totalCost": "Total",
+    "dayTotal": "Day total {{total}}",
+    "empty": "No meals logged for this day."
+  },
+  "reports": {
+    "title": "Reports",
+    "tabs": {
+      "consumption": "Consumption",
+      "purchases": "Purchases"
+    },
+    "buckets": {
+      "day": "Daily",
+      "week": "Weekly",
+      "month": "Monthly"
+    },
+    "thisMonthConsumption": "This month's consumption",
+    "thisMonthPurchases": "This month's purchases",
+    "averagePerDay": "Daily average",
+    "itemsBoughtCount": "{{count}} items purchased",
+    "topMeals": "Top 3 expensive meals",
+    "topPurchases": "Top 3 expensive purchases",
+    "byDay": "By day",
+    "empty": "No data yet."
+  },
+  "account": {
+    "title": "Account",
+    "language": "Language",
+    "currency": "Currency"
+  },
+  "common": {
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "OK",
+    "loading": "Loading…",
+    "note": "Note"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "app": {
+    "name": "bite-budget",
+    "tagline": "한 끼의 가치"
+  },
+  "nav": {
+    "items": "식재료",
+    "meals": "끼니",
+    "reports": "리포트",
+    "account": "계정"
+  },
+  "auth": {
+    "signInWithGoogle": "Google로 시작",
+    "signOut": "로그아웃",
+    "loading": "불러오는 중…"
+  },
+  "items": {
+    "title": "식재료",
+    "addNew": "식재료 추가",
+    "edit": "식재료 수정",
+    "name": "이름",
+    "purchaseDate": "구매일",
+    "unit": "단위",
+    "totalQuantity": "총 수량",
+    "totalPrice": "총 가격",
+    "note": "메모",
+    "save": "저장",
+    "delete": "삭제",
+    "archive": "보관",
+    "unarchive": "보관 해제",
+    "filter": {
+      "inStock": "재고 있음",
+      "archived": "보관"
+    },
+    "remaining": "{{remaining}}/{{total}} {{unit}}",
+    "unitPriceHint": "단위가격 {{price}} / {{unit}}",
+    "empty": "아직 등록된 식재료가 없어요. 첫 식재료를 추가해 보세요.",
+    "consumedWarning": "이미 소비된 기록이 있어 삭제 대신 보관됩니다.",
+    "recalcPast": "과거 끼니 재계산"
+  },
+  "meals": {
+    "title": "끼니 기록",
+    "addNew": "끼니 추가",
+    "edit": "끼니 수정",
+    "eatenAt": "일시",
+    "label": "종류",
+    "labels": {
+      "breakfast": "아침",
+      "lunch": "점심",
+      "dinner": "저녁",
+      "snack": "간식",
+      "other": "기타"
+    },
+    "consumptions": "먹은 것",
+    "addConsumption": "식재료 추가",
+    "selectItem": "식재료 선택",
+    "qty": "수량",
+    "share": "끼당 비용",
+    "totalCost": "총",
+    "dayTotal": "일 합계 {{total}}",
+    "empty": "이 날 기록한 끼니가 없어요."
+  },
+  "reports": {
+    "title": "리포트",
+    "tabs": {
+      "consumption": "소비",
+      "purchases": "구매"
+    },
+    "buckets": {
+      "day": "일간",
+      "week": "주간",
+      "month": "월간"
+    },
+    "thisMonthConsumption": "이번 달 소비",
+    "thisMonthPurchases": "이번 달 구매",
+    "averagePerDay": "하루 평균",
+    "itemsBoughtCount": "구매한 식재료 {{count}} 종",
+    "topMeals": "비싼 끼니 TOP 3",
+    "topPurchases": "비싼 식재료 TOP 3",
+    "byDay": "일별",
+    "empty": "아직 데이터가 없어요."
+  },
+  "account": {
+    "title": "계정",
+    "language": "언어",
+    "currency": "통화"
+  },
+  "common": {
+    "back": "뒤로",
+    "save": "저장",
+    "cancel": "취소",
+    "confirm": "확인",
+    "loading": "불러오는 중…",
+    "note": "메모"
+  }
+}
