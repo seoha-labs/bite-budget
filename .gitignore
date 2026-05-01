@@ -1,7 +1,8 @@
 node_modules/
 dist/
-lib/
+backend/lib/
 .env
+.idea/
 .env.*
 !.env.example
 .firebase/
