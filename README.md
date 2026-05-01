@@ -41,11 +41,42 @@ pnpm emulate
 
 ## 빌드 & 배포
 
+이 레포는 **GitHub Pages**에 프론트를 배포한다. Firestore 보안 규칙과 Cloud
+Functions는 별도로 `firebase deploy` 해야 한다.
+
+### 1) GitHub Pages — 자동 배포 (`.github/workflows/deploy-pages.yml`)
+
+`main` 브랜치에 푸시하거나 Actions 탭에서 수동 실행하면
+`https://<owner>.github.io/<repo>/`에 자동 배포.
+
+**처음 한 번만 해야 하는 세팅:**
+
+1. **Repo Settings → Pages → Source**: `GitHub Actions` 선택
+2. **Repo Settings → Secrets and variables → Actions → New repository secret**
+   에 Firebase 웹 콘피그 6종을 추가:
+   - `VITE_FIREBASE_API_KEY`
+   - `VITE_FIREBASE_AUTH_DOMAIN` (예: `bite-budget-xxxx.firebaseapp.com`)
+   - `VITE_FIREBASE_PROJECT_ID`
+   - `VITE_FIREBASE_STORAGE_BUCKET`
+   - `VITE_FIREBASE_MESSAGING_SENDER_ID`
+   - `VITE_FIREBASE_APP_ID`
+3. **Firebase Console → Authentication → Settings → Authorized domains**
+   에 `<owner>.github.io` 추가 (Google 로그인 팝업이 이 도메인에서 열리도록).
+
+워크플로는 Vite `base`를 `/<repo>/`로 설정해서 빌드하고, SPA 라우팅을 위해
+`index.html`을 `404.html`로 복사한다. 그래서 깊은 링크(`/items/abc123`)도
+새로고침하면 정상 작동.
+
+### 2) Firestore 규칙 + Cloud Functions — 수동
+
 ```bash
-pnpm build               # frontend + backend 빌드
-firebase use --add       # 처음 한 번 프로젝트 연결
-pnpm deploy              # firebase deploy
+firebase use --add               # 처음 한 번 프로젝트 연결
+firebase deploy --only firestore # rules + indexes
+firebase deploy --only functions # backend/
 ```
+
+(필요하면 이것도 GitHub Actions로 추가 가능. 서비스 계정 키를
+`FIREBASE_SERVICE_ACCOUNT` 시크릿으로 넣고 별도 워크플로 추가.)
 
 ## 데이터 모델 요약
 
