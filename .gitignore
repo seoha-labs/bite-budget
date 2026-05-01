@@ -1,0 +1,14 @@
+node_modules/
+dist/
+backend/lib/
+.env
+.idea/
+.env.*
+!.env.example
+.firebase/
+*.log
+.DS_Store
+.vite/
+coverage/
+.pnpm-store/
+*.tsbuildinfo
