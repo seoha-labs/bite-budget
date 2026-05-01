@@ -1,15 +1,10 @@
 {
-  "functions": {
-    "source": "backend",
-    "runtime": "nodejs20",
-    "predeploy": ["pnpm --filter backend build"]
-  },
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "frontend/dist",
+    "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
@@ -21,7 +16,6 @@
   "emulators": {
     "auth": { "port": 9099 },
     "firestore": { "port": 8080 },
-    "functions": { "port": 5001 },
     "hosting": { "port": 5000 },
     "ui": { "enabled": true }
   }
