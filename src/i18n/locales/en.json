@@ -83,7 +83,12 @@
   "account": {
     "title": "Account",
     "language": "Language",
-    "currency": "Currency"
+    "currency": "Currency",
+    "sponsor": {
+      "title": "Enjoying bite-budget?",
+      "description": "Support ongoing development with a sponsorship.",
+      "cta": "Sponsor on GitHub"
+    }
   },
   "common": {
     "back": "Back",

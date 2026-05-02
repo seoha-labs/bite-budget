@@ -83,7 +83,12 @@
   "account": {
     "title": "계정",
     "language": "언어",
-    "currency": "통화"
+    "currency": "통화",
+    "sponsor": {
+      "title": "bite-budget이 마음에 드셨나요?",
+      "description": "후원으로 개발을 응원해 주세요.",
+      "cta": "GitHub에서 후원하기"
+    }
   },
   "common": {
     "back": "뒤로",

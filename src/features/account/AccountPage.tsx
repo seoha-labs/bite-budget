@@ -33,6 +33,23 @@ export function AccountPage() {
             <span className="text-ink-900/60">KRW ₩</span>
           </div>
         </div>
+        <a
+          href="https://github.com/sponsors/joonseolee"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block rounded-2xl border border-ink-900/10 p-4 transition-colors hover:bg-ink-900/[0.03] active:bg-ink-900/5"
+        >
+          <div className="text-base font-semibold">
+            {t('account.sponsor.title')}
+          </div>
+          <div className="mt-1 text-sm text-ink-900/60">
+            {t('account.sponsor.description')}
+          </div>
+          <div className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-ink-900">
+            <span aria-hidden>♥</span>
+            <span>{t('account.sponsor.cta')}</span>
+          </div>
+        </a>
         <Button
           variant="ghost"
           className="w-full"

@@ -1,5 +1,7 @@
 # bite-budget
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?logo=github)](https://github.com/sponsors/joonseolee)
+
 A game-inventory-style household ledger. Register groceries as "items" once, then log what you ate at each meal — costs are auto-distributed by unit price.
 
 > Example: buy 30 eggs for ₩9,000 → unit price ₩300/egg. Eat 2 eggs in one meal → that meal automatically logs ₩600.
